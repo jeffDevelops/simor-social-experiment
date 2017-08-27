@@ -1,0 +1,113 @@
+/*  blie-green rgb(50, 184, 132) */
+body {
+	background-color: rgb(130, 195, 47);
+	font-size: 16px;
+}
+
+.content {
+	margin: 30vh 0 0 0;
+}
+
+p {
+	color: #fff;
+	font-size: 1.5em;
+	letter-spacing: .05em;
+}
+
+/* Transition Effect */
+.invisible {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1.2s ease-in;
+	-webkit-transition:  opacity 1.2s ease-in;
+	-moz-transition: opacity 1.2s ease-in;
+	-ms-transition: opacity 1.2s ease-in;
+	-o-transition: opacity 1.2s ease-in;
+}
+
+.visible {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 1.2s ease-in;
+	-moz-transition: opacity 1.2s ease-in;
+	-ms-transition: opacity 1.2s ease-in;
+	-o-transition: opacity 1.2s ease-in;
+	transition:  opacity 1.2s ease-in;
+}
+/*-------------------*/
+label {
+ color: #fff;
+ font-size: .8em;
+ text-transform: uppercase;
+ font-weight: 700;
+ letter-spacing: .1em;
+
+}
+
+input {
+	color: #fff;
+}
+
+input[type=text]:not(.browser-default) {
+	border-bottom: 1px solid #fff;
+	font-size: 1.5em;
+}
+
+input::placeholder {
+	color: #fff;
+	font-size: 1em;
+}
+
+input:active {
+	border-bottom: 1px solid rgb(70, 159, 189);
+}
+
+#submit {
+	color: #fff;
+	background: rgb(70, 159, 189);
+	font-size: .8em;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .1em;
+}
+
+#submit:focus,
+#submit:active {
+	outline: none;
+}
+
+.userAction {
+	border-right: 1px solid #fff;
+}
+
+.userAction .link {
+	display: block;
+	margin: 50px 0;
+	font-style: italic;
+	font-size: 1.5em;
+}
+
+.userAction p {
+	font-style: italic;
+	font-size: 1.2em	;
+}
+
+.powered_by {
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-weight: 700;
+	text-align: center;
+	margin: 8vh auto 0 auto;
+	font-size: .8em;
+}
+
+.logo_container {
+	margin: 0 auto;
+}
+
+.logo {
+	display: block;
+	width: 20%;
+	height: auto;
+	margin: 0 auto 0 40.3%;
+}
