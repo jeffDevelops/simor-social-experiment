@@ -112,19 +112,25 @@ document.addEventListener("DOMContentLoaded", function() {
         break;
     }
     if(isValidated) {
-      $.post('/samenamesocialexperiment/howbigcanitget', { name: visitorName });
+      $.post('/samenamesocialexperiment/howbigcanitget', { name: visitorName })
+      .done(function(result, error) {
+        if (error) throw error;
+        console.log(result);
+      });
     }
 
   }); 
 
   function displayInvalidated() {
     emailLink.style.display = 'none';
-    var para = document.createElement("p");
-    para.innerText = "Your name is not validated in our system, which leads us to believe you've arrived to our website by chance. If not, try entering your name again.";
+
     var message = document.querySelector(".userAction");
-    para.classList.add('invisible');
+
+    var para = document.createElement("p");
+    para.innerText = 'Your name is not validated in our system, which leads us to believe you\'ve arrived to our website by chance. If not, try entering your name again.';
     message.append(para);
-    para.classList.remove('invisible');
+    para.className = 'invisible';
+    para.className = 'visible';
   } 
 
   function displayEmailLink() {

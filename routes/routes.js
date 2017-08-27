@@ -11,9 +11,4 @@ router.route('/samenamesocialexperiment/howbigcanitget')
       //If validated, update
       .post(controller.updateCounter);
 
-
-router.route('/samenamesocialexperiment/siteadministrator')
-      //Access the site
-      .get(controller.renderResults);
-
 module.exports = router;
