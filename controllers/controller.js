@@ -237,6 +237,10 @@ function updateCounter(req, res) {
       break;
     default:
     console.log("A name is spelled wrong somewhere.");
+    db.Traffic.findOne({}, function(err, doc) {
+      if (err) throw err;
+      res.json(doc);
+    });
     break;
   }
 }

@@ -115,10 +115,20 @@ document.addEventListener("DOMContentLoaded", function() {
       $.post('/samenamesocialexperiment/howbigcanitget', { name: visitorName })
       .done(function(result) {
         console.log(result);
+        submitButton.style.margin = '0 0 25px 0';
+        displayResults(result);
+      });
+
+    } else {
+      $.post('/samenamesocialexperiment/howbigcanitget')
+      .done(function(result) {
+        console.log(result);
         displayResults(result);
       });
     }
 
+    submitButton.classList.add('disabled');
+    
   });
 
   function displayResults(data) {
@@ -174,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
     emma.innerHTML = 'Emma, or variants: <span class="text_right">' + data.trafficEmma + '</span>';
     resultsDiv.appendChild(emma);
 
-    
+
     var total = document.createElement('p');
     total.innerHTML = 'Total Validated Site Traffic: <span class="text_right">' + data.validatedTrafficTotal + '</span>';
     resultsDiv.appendChild(total);
@@ -185,11 +195,12 @@ document.addEventListener("DOMContentLoaded", function() {
     emailLink.style.display = 'none';
 
     var message = document.querySelector(".userAction");
+    message.style.visibility = 'visible';
 
     var para = document.createElement("p");
     para.innerText = 'Your name is not validated in our system, which leads us to believe you\'ve arrived to our website by chance. If not, try entering your name again.';
-    message.append(para);
     para.className = 'invisible';
+    message.append(para);
     para.className = 'visible';
   } 
 
