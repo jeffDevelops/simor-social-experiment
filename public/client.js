@@ -113,13 +113,73 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     if(isValidated) {
       $.post('/samenamesocialexperiment/howbigcanitget', { name: visitorName })
-      .done(function(result, error) {
-        if (error) throw error;
+      .done(function(result) {
         console.log(result);
+        displayResults(result);
       });
     }
 
-  }); 
+  });
+
+  function displayResults(data) {
+    console.log('display results func: ' + JSON.stringify(data));
+    var resultsDiv = document.querySelector('.results');
+    resultsDiv.innerHTML = '';
+
+    var title = document.createElement('h4');
+    title.innerText = 'Campaign Reach by Name';
+    resultsDiv.appendChild(title);
+
+    var mohammed = document.createElement('p');
+    mohammed.innerHTML = 'Mohammed, or variants: <span class="text_right">' + data.trafficMohammed + '</span>';
+    resultsDiv.appendChild(mohammed);
+
+    var aarav = document.createElement('p');
+    aarav.innerHTML = 'Aarav, or variants: <span class="text_right">' + data.trafficAarav + '</span>';
+    resultsDiv.appendChild(aarav);
+
+    var wei = document.createElement('p');
+    wei.innerHTML = 'Wei, or variants: <span class="text_right">' + data.trafficWei + '</span>';
+    resultsDiv.appendChild(wei);
+
+    var noah = document.createElement('p');
+    noah.innerHTML = 'Noah, or variants: <span class="text_right">' + data.trafficNoah + '</span>';
+    resultsDiv.appendChild(noah);
+
+    var santiago = document.createElement('p');
+    santiago.innerHTML = 'Santiago, or variants: <span class="text_right">' + data.trafficSantiago + '</span>';
+    resultsDiv.appendChild(santiago);
+
+    var alireza = document.createElement('p');
+    alireza.innerHTML = 'Alireza, or variants: <span class="text_right">' + data.trafficAlireza + '</span>';
+    resultsDiv.appendChild(alireza);
+
+    var fatima = document.createElement('p');
+    fatima.innerHTML = 'Fatima, or variants: <span class="text_right">' + data.trafficFatima + '</span>';
+    resultsDiv.appendChild(fatima);
+
+    var mary = document.createElement('p');
+    mary.innerHTML = 'Mary, or variants: <span class="text_right">' + data.trafficMary + '</span>';
+    resultsDiv.appendChild(mary);
+
+    var jing = document.createElement('p');
+    jing.innerHTML = 'Jing, or variants: <span class="text_right">' + data.trafficJing + '</span>';
+    resultsDiv.appendChild(jing);
+
+    var amelia = document.createElement('p');
+    amelia.innerHTML = 'Amelia, or variants: <span class="text_right">' + data.trafficAmelia + '</span>';
+    resultsDiv.appendChild(amelia);
+
+    var emma = document.createElement('p');
+    emma.innerHTML = 'Emma, or variants: <span class="text_right">' + data.trafficEmma + '</span>';
+    resultsDiv.appendChild(emma);
+
+    
+    var total = document.createElement('p');
+    total.innerHTML = 'Total Validated Site Traffic: <span class="text_right">' + data.validatedTrafficTotal + '</span>';
+    resultsDiv.appendChild(total);
+
+  }
 
   function displayInvalidated() {
     emailLink.style.display = 'none';

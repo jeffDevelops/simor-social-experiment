@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Social Experiment</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -9,39 +11,47 @@
 <body>
 	<div class="content">
 		<div class="row">
-			<div class="col s2"></div>
-			<div class="col s8">
+			<div class="col s1 m2"></div>
+			<div class="col s10 m8">
 				<p>If you got this link from a friend, you've been selected to participate in a super secret social experiment. You have the power to decide whether to pass this on to a friend of the same name just because another friend with your name told you to.</p>
 			</div>
-			<div class="col s2"></div>
+			<div class="col s1 m2"></div>
 		</div>
 		<div class="row">
-			<div class="col s2"></div>
-			<div class="col s8">
+			<div class="col s1 m2"></div>
+			<div class="col s10 m8">
 				<label for="name">Enter your name to get the secret link:</label>
 				<input id="name" type="text" name="name" placeholder="Your name">
-			<div class="col s2"></div>
+			<div class="col s1 m2"></div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col s2"></div>
-			<div class="col s8">
+			<div class="col s1 m2"></div>
+			<div class="col s10 m8">
 				<button id="submit" class="btn waves-effect waves-light"><i class="material-icons left">send</i>Submit</button>
 			</div>
-			<div class="col s2"></div>
+			<div class="col s1 m2"></div>
 		</div>
 	</div>
+
+
+
 	<div class="row">
-		<div class="col s2"></div>
-		<div class="col s4 userAction">
+		<div class="col s1 m2 l2"></div>
+		<div class="col s10 m8 l4 userAction">
 			<!-- link or error text rendered here -->
 			<a class="link invisible" href="mailto:?subject=&body=/samenamesocialexperiment/howbigcanitget">Send sketchy email to your friend.</a>
 		</div>
-		<div class="col s4 traffic">
-			<!-- append here data -->
+		<div class="col s1 m2"></div>
+		<div class="col s1 m0"></div>
+		<div id="results" class="col s10 m12 l4 results">
+			<!-- results rendered here -->
 		</div>
-		<div class="col s2"></div>
+		<div class="col s1 m0 l3"></div>
 	</div>
+
+
+
 	<div class="row">
 		<div class="col s4"></div>
 		<div class="col s4"><p class="powered_by">Powered By</p><div class="logo_container">

@@ -228,7 +228,7 @@ function updateCounter(req, res) {
       }).then(() => {
         console.log('second newAlireza: ' + newAlireza);
         console.log('second newValidatedTrafficTotal: ' + newValidatedTrafficTotal);
-        db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficAlireza: newEmma }}, {$new: true}, function(err, doc) {
+        db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficAlireza: newAlireza }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
         res.json(doc); 
@@ -241,12 +241,7 @@ function updateCounter(req, res) {
   }
 }
 
-function renderResults(req, res) {
-  console.log("boop");
-}
-
 module.exports = {
   renderSite: renderSite,
-  updateCounter: updateCounter,
-  renderResults: renderResults
+  updateCounter: updateCounter
 };
