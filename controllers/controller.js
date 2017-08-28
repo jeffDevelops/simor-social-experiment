@@ -40,7 +40,8 @@ function updateCounter(req, res) {
         console.log('second newValidatedTrafficTotal: ' + newValidatedTrafficTotal);
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficMohammed: newMohammed }}, {$new: true}, function(err, doc) {
         if (err) throw err;
-        console.log(doc); 
+        console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -59,6 +60,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficAarav: newAarav }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -77,6 +79,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficWei: newWei }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -95,6 +98,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficNoah: newNoah }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -113,6 +117,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficSantiago: newSantiago }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -131,6 +136,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficFatima: newFatima }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -149,6 +155,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficMary: newMary }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -167,6 +174,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficJing: newJing }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -185,6 +193,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficAmelia: newAmelia }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -203,6 +212,7 @@ function updateCounter(req, res) {
         db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficEmma: newEmma }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
@@ -218,24 +228,24 @@ function updateCounter(req, res) {
       }).then(() => {
         console.log('second newAlireza: ' + newAlireza);
         console.log('second newValidatedTrafficTotal: ' + newValidatedTrafficTotal);
-        db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficAlireza: newEmma }}, {$new: true}, function(err, doc) {
+        db.Traffic.findOneAndUpdate({}, { $set: {validatedTrafficTotal: newValidatedTrafficTotal, trafficAlireza: newAlireza }}, {$new: true}, function(err, doc) {
         if (err) throw err;
         console.log(doc);
+        res.json(doc); 
         });
       });
       break;
     default:
     console.log("A name is spelled wrong somewhere.");
+    db.Traffic.findOne({}, function(err, doc) {
+      if (err) throw err;
+      res.json(doc);
+    });
     break;
   }
 }
 
-function renderResults(req, res) {
-  console.log("boop");
-}
-
 module.exports = {
   renderSite: renderSite,
-  updateCounter: updateCounter,
-  renderResults: renderResults
+  updateCounter: updateCounter
 };

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Social Experiment</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -9,42 +11,52 @@
 <body>
 	<div class="content">
 		<div class="row">
-			<div class="col s2"></div>
-			<div class="col s8">
-				<p>If you got this link from a friend, you've been selected to participate in a super secret social experiment. You have the power to decide whether to pass this on to a friend of the same name just because another friend with your name told you to.</p>
+			<div class="col s1 m2"></div>
+			<div class="col s10 m8">
+				<p>If you got this link from a friend, you've been selected to participate in a super secret social experiment. You have the power to decide whether to pass this on to a friend of the same name just because another friend with your name told you to. If you do choose to participate, you'll see the current results of the campaign below.</p>
 			</div>
-			<div class="col s2"></div>
+			<div class="col s1 m2"></div>
 		</div>
 		<div class="row">
-			<div class="col s2"></div>
-			<div class="col s8">
+			<div class="col s1 m2"></div>
+			<div class="col s10 m8">
 				<label for="name">Enter your name to get the secret link:</label>
 				<input id="name" type="text" name="name" placeholder="Your name">
-			<div class="col s2"></div>
+			<div class="col s1 m2"></div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col s2"></div>
-			<div class="col s8">
+		<div class="row button_row">
+			<div class="col s1 m2"></div>
+			<div class="col s10 m8">
 				<button id="submit" class="btn waves-effect waves-light"><i class="material-icons left">send</i>Submit</button>
 			</div>
-			<div class="col s2"></div>
+			<div class="col s1 m2"></div>
 		</div>
 	</div>
+
+
+
 	<div class="row">
-		<div class="col s2"></div>
-		<div class="col s4 userAction">
+		<div class="col s1 m2 l2"></div>
+		<div class="col s10 m8 l4 userAction">
 			<!-- link or error text rendered here -->
-			<a class="link invisible" href="mailto:?subject=&body=/samenamesocialexperiment/howbigcanitget">Send sketchy email to your friend.</a>
+			<a class="btn waves-effect waves-light link invisible" href="mailto:?subject=&body=/samenamesocialexperiment/howbigcanitget"><i class="material-icons left">email</i>Pass it on</a>
 		</div>
-		<div class="col s4 traffic">
-			<!-- append here data -->
-		</div>
-		<div class="col s2"></div>
+		<div class="col s1 m2"></div>
+
+		<div class="col s1 m2"></div>
+		<div class="col s10 m8 l4 results">
+			<div id="results">
+				<!-- results rendered here -->
+			</div>
+		<div class="col s1 m2 l2"></div>
 	</div>
+
+
+
 	<div class="row">
-		<div class="col s4"></div>
-		<div class="col s4"><p class="powered_by">Powered By</p><div class="logo_container">
+		<div class="col s12"><p class="powered_by">Powered By</p>
+		<div class="logo_container">
 			<svg class="logo" version="1.0" xmlns="http://www.w3.org/2000/svg"
 			 width="300.000000pt" height="115.000000pt" viewBox="0 0 300.000000 115.000000"
 			 preserveAspectRatio="xMidYMid meet">
@@ -167,8 +179,8 @@
 			-13 -4 -16 -10z"/>
 			<path d="M428 143 c7 -3 16 -2 19 1 4 3 -2 6 -13 5 -11 0 -14 -3 -6 -6z"/>
 			</g>
-			</svg></div></div>
-		<div class="col s4"></div>
+			</svg>
+		</div>
 	</div>
 	<script
 		  src="https://code.jquery.com/jquery-3.2.1.min.js"
