@@ -24,7 +24,6 @@ p {
 	-ms-transition: opacity 1.2s ease-in;
 	-o-transition: opacity 1.2s ease-in;
 }
-
 .visible {
 	opacity: 1;
 	visibility: visible;
@@ -63,6 +62,11 @@ input:active {
 }
 
 #submit {
+	-webkit-transition: opacity 1.2s ease-in;
+	-moz-transition: opacity 1.2s ease-in;
+	-ms-transition: opacity 1.2s ease-in;
+	-o-transition: opacity 1.2s ease-in;
+	transition:  opacity 1.2s ease-in;
 	color: #fff;
 	background: rgb(70, 159, 189);
 	font-size: .8em;
@@ -76,16 +80,49 @@ input:active {
 	outline: none;
 }
 
+@media(max-width: 600px) {
+	.content {
+		margin: 3vh auto;
+	}
+
+	p {
+		font-size: 1.1em;
+	}
+}
+
+@media(min-width: 992px) {
+	.userAction {
+		height: 400px;
+	}
+
+	.results {
+		height: 400px;
+	}
+
+	div.col.s10.m8.l4.results {
+		float: left;
+		margin: 0 auto;
+	}
+}
+
+.userAction {
+	visibility: hidden;
+}
+
 .userAction .link {
 	display: block;
-	margin: 50px 0;
-	font-style: italic;
-	font-size: 1.5em;
+	margin: 25px 25px 0 0;
+	background: rgb(70, 159, 189);
+	font-size: .8em;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .1em;
 }
 
 .userAction p {
 	font-style: italic;
-	font-size: 1.2em	;
+	font-size: 1.2em;
+	padding: 0 25px 0 0;
 }
 
 .powered_by {
@@ -104,36 +141,46 @@ input:active {
 .logo {
 	display: block;
 	width: 20%;
+	min-width: 100px;
+	max-width: 150px;
 	height: auto;
-	margin: 0 auto 0 40.3%;
+	margin: 0 auto;
 }
 
-/*Rendered Results, Large Screens */
-div.col.l4.results {
-	color: white;
-	padding: 0 40px;
-	border-left: 1px solid #fff;
-}
+@media(max-width: 992px) {
+	div.col.s10.m8.l4.results {
+		float: none;
+	}
 
-/*Rendered Results, Small Screens */
-@media (max-width: 992px) {
-	#results {
-		display: block;
-		width: 84%;
-		margin: 0 auto;
+	.userAction .link {
+		margin: -30px 0 50px 0;
 	}
 }
 
+/*Rendered Results, Large Screens */
+div.col.s10.m8.l4.results {
+	color: white;
+	display: block;
+	margin: 0 auto;
+}
+
 .row .col.s12 {
-	float: none;
-	width: 84%;
+	margin: 0 auto;
+}
+
+#results {
+	display: block;
+	margin: 0 auto;
+	border-left: 1px solid #fff;
+}
+
+.results {
 	margin: 0 auto;
 }
 
 .results h4 {
 	display: block;
-	width: 100%;
-	margin: 0 auto 10px auto;
+	width: 84%;
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: .1em;
@@ -150,5 +197,6 @@ div.col.l4.results {
 
 .results .text_right {
 	text-align: right;
+	float: right;
 	font-weight: 700;
 }
