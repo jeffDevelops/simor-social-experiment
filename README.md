@@ -3,6 +3,12 @@
 
 In this case study, we use a full-stack application to track the numerical reach of a secret link passed from one person to another of the same first name.
 
+### View the Project
+
+You may view a test version of the software on a Heroku server at the link below. It is currently unhosted. We can certainly change the URL, but the idea here was to make it long and difficult to access, except for when it is deliberately copied and pasted.
+
+https://fast-caverns-38981.herokuapp.com/samenamesocialexperiment/howbigcanitget
+
 ### Example
 
 Let's say we wanted to test the name 'Bob'. If the chain starts with Bob 1, and Bob 1 sends the secret link to Bob 2, Bob 2 now decides whether to pass the link on. Is he more likely to do so if the person that told him to has the same name?
@@ -14,9 +20,11 @@ As the code stands now, the mechanism for passing the secret link along is sent 
 Before the campaign is deployed, saving whether a user has visited to local storage is definitely the next step. Currently, any user could refresh the page and submit the form again--spamming our test results.
 
 ## Simor
-This project was executed under the direction of Simor.
+This project was executed under the direction of Simor, "a social platform for students, teachers, and tutors to connect on academic knowledge."
 
-Build a network of intellectual peers across the topics that interest you, add new friends to your network and follow them as they post questions, answers, and thoughts.
+"For students Who need immediate answer to their questions, We provide free help that saves them money and help them apply for jobs. Unlike Chegg.com (worth: $1.1 billion) that charges students to provide them with answers. We believe students don't have money to spend to receive answers to their questions. So, we provide answers for free by using the knowledge of another student. The incentive for the second student to answer questions is to build up a great resume on Simor to show off to potential employers."
+
+"Build a network of intellectual peers across the topics that interest you, add new friends to your network and follow them as they post questions, answers, and thoughts."
 
 ## Contributors
 ### Jeffery Reynolds
