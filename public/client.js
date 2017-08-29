@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  var submitButton = document.getElementById('submit');
 
+  var body = document.querySelector('body');
+  var submitButton = document.getElementById('submit');
   var emailLink = document.querySelector('.link');
 
   var isValidated = false;
@@ -116,14 +117,30 @@ document.addEventListener("DOMContentLoaded", function() {
       .done(function(result) {
         console.log(result);
         submitButton.style.margin = '0 0 25px 0';
-        displayResults(result);
+        if (result.error) {
+          console.log(result.error);
+          var errorDialog = document.createElement('div');
+          errorDialog.className = 'dialog';
+          errorDialog.innerHTML = '<div class="dialog_box">Connection error. Please try again later.</div>';
+          body.appendChild(errorDialog);
+        } else {
+          displayResults(result);
+        }
       });
 
     } else {
       $.post('/samenamesocialexperiment/howbigcanitget')
       .done(function(result) {
         console.log(result);
-        displayResults(result);
+        if (result.error) {
+          console.log(result.error);
+          var errorDialog = document.createElement('div');
+          errorDialog.className = 'dialog';
+          errorDialog.innerHTML = '<div class="dialog_box">Connection error. Please try again later.</div>';
+          body.appendChild(errorDialog);
+        } else {
+          displayResults(result);
+        }
       });
     }
 

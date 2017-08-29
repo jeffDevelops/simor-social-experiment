@@ -200,3 +200,29 @@ div.col.s10.m8.l4.results {
 	float: right;
 	font-weight: 700;
 }
+
+/* Error Handler */
+.dialog {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+}
+
+.dialog_box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 10%;
+	min-height: 100px;
+	width: 100%;
+	background: red;
+	text-align: center;
+	padding: 30px;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-weight: 700;
+}
