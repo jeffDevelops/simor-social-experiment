@@ -8,18 +8,10 @@ function renderSite(req, res) {
 function updateCounter(req, res, next) {
   let incomingName = req.body.name;
   let propertyToUpdate = `traffic${incomingName}`;
-  console.log('incomingName: ' + incomingName);
-  console.log('propertyToUpdate: ' + propertyToUpdate);
-  // db.Traffic.findOne({}, function(err, foundDoc) {
-  //   let updatedNameTotal = foundDoc[propertyToUpdate]++;
-  //   let updatedTotal = foundDoc.validatedTrafficTotal++;
-  // }).then( () => {
   db.Traffic.findOne({}, function(err, doc) {
-    console.log('hi');
     if (err) {
       res.json({ error: 'Connection error.' });
     }
-    console.log(doc);
     doc[propertyToUpdate]++;
     doc.validatedTrafficTotal++;
     doc.save( (err, savedDoc) => {
