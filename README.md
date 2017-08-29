@@ -32,7 +32,7 @@ Server-side and database architecture, client-side logic, responsive design, pro
 ### Roxann Lopez
 Client-side logic, Materialize CSS library, popular names research
 
-# MIT Licence
+## MIT Licence
 Copyright 2017, Jeffery Reynolds
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
