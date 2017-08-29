@@ -1,5 +1,5 @@
 # Behavioral Research
-## Does having the same name as somebody make a person more likely to perform an action?
+### ARE PEOPLE MORE LIKELY TO PERFORM AN ACTION BECAUSE SOMEONE WITH THE SAME NAME TOLD THEM TO DO IT?
 
 In this case study, we use a full-stack application to track the numerical reach of a secret link passed from one person to another of the same first name.
 
