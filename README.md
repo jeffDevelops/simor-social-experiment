@@ -22,7 +22,7 @@ Before the campaign is deployed, saving whether a user has visited to local stor
 ## Simor
 This project was executed under the direction of Simor, "a social platform for students, teachers, and tutors to connect on academic knowledge."
 
-"For students Who need immediate answer to their questions, We provide free help that saves them money and help them apply for jobs. Unlike Chegg.com (worth: $1.1 billion) that charges students to provide them with answers. We believe students don't have money to spend to receive answers to their questions. So, we provide answers for free by using the knowledge of another student. The incentive for the second student to answer questions is to build up a great resume on Simor to show off to potential employers."
+"For students who need immediate answers to their questions, we provide free help that saves them money and help them apply for jobs. Unlike Chegg.com (worth: $1.1 billion) that charges students to provide them with answers, we believe students don't have money to spend to receive answers to their questions. So, we provide answers for free by using the knowledge of another student. The incentive for the second student to answer questions is to build up a great resume on Simor to show off to potential employers."
 
 "Build a network of intellectual peers across the topics that interest you, add new friends to your network and follow them as they post questions, answers, and thoughts."
 
